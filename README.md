@@ -148,3 +148,7 @@ The Author is not liable for any damages, direct or indirect, resulting from the
 ## 7. Conclusion
 
 LLS represents a shift away from the "Black Box" team-effort of Backpropagation toward a "Highly-Efficient Specialist" approach. It democratizes AI training by removing the barrier of multi-thousand dollar hardware requirements.
+
+
+
+P.S. Testing and experimentation with LLS are fully allowed for non-commercial research, academic work, or personal projects. No commercial license is required unless the method is used to generate profit or to create tools that provide financial gain. You can freely test it
