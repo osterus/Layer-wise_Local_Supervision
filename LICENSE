@@ -1,0 +1,64 @@
+Layer-wise Local Supervision (LLS) Proprietary License (2024)
+
+Copyright (c) 2024 Azarenko Konstantin / Azarenko Kostyantun. All Rights Reserved
+Contact: kostyaazarenko70@gmail.com
+
+1. Preamble & Definitions
+This License governs the use, reproduction, modification, distribution, and training of the Layer-wise Local Supervision (LLS) software, algorithm, weights, and all related documentation (collectively, the “Software”).
+By accessing, using, or modifying the Software, you explicitly agree to be bound by this License.
+
+Definitions:
+Commercial Use includes, but is not limited to:
+Any use of the Software or derivative works for monetary gain, whether directly or indirectly.
+Training models with the Software that are sold, licensed, leased, or provided via paid API.
+Training models for internal business operations, R&D for commercial products, or efficiency improvements in a for-profit organization.
+Use by any entity that has received external funding exceeding $10,000, including venture capital, angel investment, or government grants.
+Generation of synthetic data or trained models for commercial distribution.
+Distribution, deployment, or hosting of the Software in any monetized or subscription-based environment.
+Non-Commercial Use is strictly defined as:
+Personal, educational, or hobbyist projects.
+Academic research conducted without corporate or for-profit sponsorship, including teaching and experiments.
+Any research where no direct or indirect financial benefit is obtained.
+
+Derivative Work includes:
+Any software, algorithm, or model that replicates the core logic, methodology, or synchronized layer-wise supervision principle of LLS, even if rewritten in another programming language, framework, or altered form.
+Models, neural network weights, or trained artifacts generated using LLS.
+2. Grant of Rights (Non-Commercial)
+
+Permission is granted, free of charge, for Non-Commercial Use only, subject to the following conditions:
+Mandatory Attribution: All copies or substantial portions of the Software, including modified versions, must display the following notice:
+
+"Powered by Layer-wise Local Supervision (LLS) Algorithm created by Azarenko Kostyantun / Azarenko Konstantin."
+Academic Citation: Any publication (research paper, blog, or article) using the Software or derived results must cite the original repository and author.
+Modification Disclosure: Modified versions must also comply with attribution and citation requirements.
+Distribution Restrictions: Distribution of the Software in any environment that could be interpreted as commercial, even without direct payment, requires a Commercial License.
+
+3. Commercial Use Restrictions
+
+Strictly Prohibited without a separate, written Commercial License Agreement:
+Use of the Software, its code, weights, or derivative works for any Commercial Use (as defined in Section 1).
+Reverse engineering, reimplementation, or translation of LLS logic for commercial deployment.
+Selling, licensing, or distributing trained models that reproduce LLS methodology.
+
+To obtain a Commercial License сontact: kostyaazarenko70@gmail.com
+
+Royalty Terms:
+Recommended: 2% of gross revenue generated from Commercial Use.
+Exact terms are determined by the Author and are negotiable.
+
+4. Intellectual Property & Derivative Works
+All rights, title, and interest in LLS and its underlying methodology remain with Azarenko Kostyantun / Azarenko Konstantin.
+Any derivative software, models, or trained artifacts that utilize LLS principles are considered part of the Software and subject to this License.
+Trained models, even if weights are reinitialized or retrained, are still considered derivative works if they replicate the core LLS methodology for commercial purposes.
+
+5. Termination & Enforcement
+Unauthorized Commercial Use is a material breach and constitutes copyright infringement.
+The Author reserves the right to seek:
+Compensatory damages (including recommended 2% of gross revenue generated during the period of violation).
+Legal fees and costs associated with enforcement.
+Upon violation, this License terminates automatically for the infringing party.
+The Author may pursue statutory damages or other remedies under applicable law.
+
+6. Disclaimer & Limitation of Liability
+The Software is provided “as-is” without any warranty of fitness, performance, or results.
+The Author is not liable for any damages, direct or indirect, resulting from the use or inability to use the Software.

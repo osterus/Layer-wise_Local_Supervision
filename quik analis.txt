@@ -1,0 +1,334 @@
+
+=== BP (full log) ===
+  mean: 2.290713
+   std: 0.097368
+   min: 2.165158
+   max: 3.377589
+ final: 2.269371
+   auc: 6615.047125
+
+=== FF (full log) ===
+  mean: 2.294335
+   std: 0.050285
+   min: 2.175229
+   max: 3.375002
+ final: 2.288244
+   auc: 6625.500838
+
+=== DIFF (full log) ===
+  mean: 0.003621
+   std: 0.058624
+   min: -0.456669
+   max: 0.095870
+ final: 0.018874
+   auc: 10.453713
+
+Rolling STD window: 96
+BP rolling STD mean: 0.026999, max: 0.174715
+FF rolling STD mean: 0.024100, max: 0.146400
+
+FF mean speedup over BP (full log): 0.20x
+
+=== STATS BY 10% PARTS ===
+
+--- Part 1 (0-288) ---
+
+=== BP ===
+  mean: 2.500781
+   std: 0.199180
+   min: 2.283701
+   max: 3.377589
+ final: 2.342423
+   auc: 717.364986
+
+=== FF ===
+  mean: 2.379188
+   std: 0.110458
+   min: 2.238898
+   max: 3.375002
+ final: 2.321619
+   auc: 682.357946
+
+=== DIFF ===
+  mean: -0.121593
+   std: 0.126423
+   min: -0.456669
+   max: 0.095870
+ final: -0.020804
+   auc: -35.007040
+BP rolling STD mean: 0.068809, max: 0.174715
+FF rolling STD mean: 0.032056, max: 0.146400
+FF mean speedup over BP (this part): 0.91x
+
+--- Part 2 (288-576) ---
+
+=== BP ===
+  mean: 2.295689
+   std: 0.027310
+   min: 2.232027
+   max: 2.370127
+ final: 2.264043
+   auc: 658.862695
+
+=== FF ===
+  mean: 2.291196
+   std: 0.024163
+   min: 2.230489
+   max: 2.350549
+ final: 2.273931
+   auc: 657.570382
+
+=== DIFF ===
+  mean: -0.004494
+   std: 0.008789
+   min: -0.029380
+   max: 0.013231
+ final: 0.009888
+   auc: -1.292314
+BP rolling STD mean: 0.024131, max: 0.028494
+FF rolling STD mean: 0.023602, max: 0.026618
+FF mean speedup over BP (this part): 0.03x
+
+--- Part 3 (576-864) ---
+
+=== BP ===
+  mean: 2.274019
+   std: 0.023694
+   min: 2.173342
+   max: 2.346096
+ final: 2.286149
+   auc: 652.631709
+
+=== FF ===
+  mean: 2.280654
+   std: 0.023126
+   min: 2.175229
+   max: 2.355703
+ final: 2.295276
+   auc: 654.535115
+
+=== DIFF ===
+  mean: 0.006635
+   std: 0.004479
+   min: -0.005880
+   max: 0.024938
+ final: 0.009127
+   auc: 1.903407
+BP rolling STD mean: 0.024029, max: 0.025876
+FF rolling STD mean: 0.023397, max: 0.025417
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 4 (864-1152) ---
+
+=== BP ===
+  mean: 2.267299
+   std: 0.023521
+   min: 2.197554
+   max: 2.318989
+ final: 2.296840
+   auc: 650.704241
+
+=== FF ===
+  mean: 2.286508
+   std: 0.023675
+   min: 2.213161
+   max: 2.346599
+ final: 2.312774
+   auc: 656.224700
+
+=== DIFF ===
+  mean: 0.019209
+   std: 0.008188
+   min: 0.000262
+   max: 0.041437
+ final: 0.015934
+   auc: 5.520459
+BP rolling STD mean: 0.023670, max: 0.025555
+FF rolling STD mean: 0.023566, max: 0.025519
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 5 (1152-1440) ---
+
+=== BP ===
+  mean: 2.267396
+   std: 0.022477
+   min: 2.203829
+   max: 2.330434
+ final: 2.303077
+   auc: 650.732924
+
+=== FF ===
+  mean: 2.289184
+   std: 0.021803
+   min: 2.223821
+   max: 2.352674
+ final: 2.324362
+   auc: 656.985929
+
+=== DIFF ===
+  mean: 0.021789
+   std: 0.004827
+   min: 0.008878
+   max: 0.036533
+ final: 0.021285
+   auc: 6.253006
+BP rolling STD mean: 0.022024, max: 0.024546
+FF rolling STD mean: 0.021314, max: 0.024009
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 6 (1440-1728) ---
+
+=== BP ===
+  mean: 2.262309
+   std: 0.024604
+   min: 2.165158
+   max: 2.319188
+ final: 2.258397
+   auc: 649.277958
+
+=== FF ===
+  mean: 2.283702
+   std: 0.024561
+   min: 2.191897
+   max: 2.346844
+ final: 2.280451
+   auc: 655.417397
+
+=== DIFF ===
+  mean: 0.021393
+   std: 0.005108
+   min: 0.009726
+   max: 0.037348
+ final: 0.022053
+   auc: 6.139440
+BP rolling STD mean: 0.024740, max: 0.026671
+FF rolling STD mean: 0.024992, max: 0.026806
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 7 (1728-2016) ---
+
+=== BP ===
+  mean: 2.262573
+   std: 0.024164
+   min: 2.190474
+   max: 2.322106
+ final: 2.280587
+   auc: 649.350688
+
+=== FF ===
+  mean: 2.285860
+   std: 0.023443
+   min: 2.221350
+   max: 2.342701
+ final: 2.308192
+   auc: 656.032334
+
+=== DIFF ===
+  mean: 0.023287
+   std: 0.004770
+   min: 0.012414
+   max: 0.037659
+ final: 0.027605
+   auc: 6.681646
+BP rolling STD mean: 0.024536, max: 0.026650
+FF rolling STD mean: 0.023563, max: 0.025627
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 8 (2016-2304) ---
+
+=== BP ===
+  mean: 2.260666
+   std: 0.024433
+   min: 2.166648
+   max: 2.343492
+ final: 2.286099
+   auc: 648.784235
+
+=== FF ===
+  mean: 2.283713
+   std: 0.024495
+   min: 2.181635
+   max: 2.376644
+ final: 2.310324
+   auc: 655.398338
+
+=== DIFF ===
+  mean: 0.023046
+   std: 0.005047
+   min: 0.009518
+   max: 0.036743
+ final: 0.024225
+   auc: 6.614103
+BP rolling STD mean: 0.024072, max: 0.026709
+FF rolling STD mean: 0.023845, max: 0.026478
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 9 (2304-2592) ---
+
+=== BP ===
+  mean: 2.259096
+   std: 0.024448
+   min: 2.169360
+   max: 2.311871
+ final: 2.217954
+   auc: 648.387604
+
+=== FF ===
+  mean: 2.282959
+   std: 0.024649
+   min: 2.184872
+   max: 2.337098
+ final: 2.245075
+   auc: 655.233364
+
+=== DIFF ===
+  mean: 0.023863
+   std: 0.004775
+   min: 0.006081
+   max: 0.038065
+ final: 0.027121
+   auc: 6.845760
+BP rolling STD mean: 0.023133, max: 0.026040
+FF rolling STD mean: 0.023441, max: 0.026186
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 10 (2592-2889) ---
+
+=== BP ===
+  mean: 2.258317
+   std: 0.023540
+   min: 2.180628
+   max: 2.312139
+ final: 2.269371
+   auc: 668.460461
+
+=== FF ===
+  mean: 2.280804
+   std: 0.023054
+   min: 2.202300
+   max: 2.333114
+ final: 2.288244
+   auc: 675.118560
+
+=== DIFF ===
+  mean: 0.022488
+   std: 0.004810
+   min: 0.010296
+   max: 0.039208
+ final: 0.018874
+   auc: 6.658099
+BP rolling STD mean: 0.022671, max: 0.026571
+FF rolling STD mean: 0.022027, max: 0.025943
+FF mean speedup over BP (this part): 0.00x
+
+=== TOP 3-4 PEAKS OF FF SPEEDUP ===
+Peak at batch 17, speedup=3.75x, period ~ 15-19
+Peak at batch 119, speedup=2.04x, period ~ 117-121
+Peak at batch 315, speedup=0.71x, period ~ 313-317
+Peak at batch 387, speedup=0.60x, period ~ 385-389
+Peak at batch 403, speedup=0.58x, period ~ 401-405
+Peak at batch 413, speedup=0.57x, period ~ 411-415
+Peak at batch 449, speedup=0.55x, period ~ 447-451
+Peak at batch 463, speedup=0.53x, period ~ 461-465
+Peak at batch 477, speedup=0.53x, period ~ 475-479
+Peak at batch 493, speedup=0.51x, period ~ 491-495

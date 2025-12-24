@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
+import os
 print("i am alive")
 
 # -------------------------
@@ -90,9 +91,9 @@ optimizer_ff_head = optim.Adam(
 print("end optimizer")
 
 # -------------------------
-# 4. Функция локального FF-обучения (УЛУЧШЕННАЯ ВЕРСИЯ)
+# 4. Функция локального обучения (УЛУЧШЕННАЯ ВЕРСИЯ)
 # -------------------------
-def ff_step_v2(model, x, y, optimizers_layers, optimizer_head, alpha=1.0):
+def l_step_v2(model, x, y, optimizers_layers, optimizer_head, alpha=1.0):
     """
     Forward-Forward Layer-wise Training v2
     
@@ -107,29 +108,29 @@ def ff_step_v2(model, x, y, optimizers_layers, optimizer_head, alpha=1.0):
     
     # ===== ШАГ 2: Локальное обучение каждого слоя =====
     out = model.embed(x).transpose(0,1)  # (seq_len, B, d_model)
-    
+
     for i, (layer, opt) in enumerate(zip(model.layers, optimizers_layers)):
-        # ✅ Отключаем градиенты для локального обучения
+        # ----- 1. Первый прогон (обучение слоя) -----
         out = out.detach().requires_grad_(True)
-        
-        # Прямой проход через слой
-        out = layer(out)
-        h = out.transpose(0,1)  # (B, seq_len, d_model)
-        
-        # ✅ КЛЮЧЕВОЕ ИЗМЕНЕНИЕ: используем голову сети для получения logits
-        # Каждый слой обучается напрямую предсказывать правильный токен
-        h_norm = model.ln(h)  # Нормализуем
-        temp_logits = model.fc_out(h_norm)  # Получаем предсказания
-        
-        # ✅ Локальная цель = cross-entropy (как и у backprop!)
-        # ✅ Умножаем на глобальную ошибку для адаптивного обучения
-        local_loss = F.cross_entropy(temp_logits.view(-1, vocab_size), y.view(-1))
+        out_tmp = layer(out)
+        h = out_tmp.transpose(0,1)
+
+        h_norm = model.ln(h)
+        temp_logits = model.fc_out(h_norm)
+
+        local_loss = F.cross_entropy(
+            temp_logits.view(-1, vocab_size),
+            y.view(-1)
+        )
         local_loss = local_loss * global_loss.item() * alpha
-        
-        # Обновляем только веса текущего слоя
+
         opt.zero_grad()
         local_loss.backward()
         opt.step()
+
+        # ----- 2. Второй прогон слоя (уже обученного) -----
+        with torch.no_grad():
+            out = layer(out.detach())
     
     # ===== ШАГ 3: Обновляем голову сети =====
     out = out.detach()
@@ -162,6 +163,8 @@ ax.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
+csv_data = []
+
 # -------------------------
 # 6. Основной цикл обучения
 # -------------------------
@@ -176,7 +179,7 @@ for epoch in range(1):
         optimizer_bp.step()
         
         # ===== FF сеть (версия 2 с cross-entropy) =====
-        loss_ff = ff_step_v2(net_ff, x, y, optimizer_ff_layers, optimizer_ff_head, alpha=1.0)
+        loss_ff = l_step_v2(net_ff, x, y, optimizer_ff_layers, optimizer_ff_head, alpha=1.0)
         
         # Логирование
         losses_bp.append(loss_bp.item())
@@ -200,12 +203,32 @@ for epoch in range(1):
             ax.autoscale_view()
             plt.pause(0.01)
 
+        if batch_idx % 2 == 0:
+            csv_row = {
+                "batch": len(losses_bp),
+                "loss_bp": loss_bp.item(),
+                "loss_ff": loss_ff,
+                "diff": loss_ff - loss_bp.item()
+            }
+            csv_data.append(csv_row)
+            df = pd.DataFrame([csv_row])
+            df.to_csv(
+                "ffv2_test.csv",
+                mode="a",
+                index=False,
+                header=not os.path.exists("ffv2_test.csv")
+            )
+
 plt.ioff()
 plt.show()
 
 # -------------------------
 # 7. Сохранение лосса в CSV
 # -------------------------
+df_batches = pd.DataFrame(csv_data)
+df_batches.to_csv("losses_batches.csv", index=False)
+print("📁 Batch-лоссы сохранены в losses_batches.csv")
+
 df = pd.DataFrame({
     "backprop": losses_bp, 
     "ff_layer_v2": losses_ff,
