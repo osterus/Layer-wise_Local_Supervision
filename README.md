@@ -20,7 +20,7 @@ LLS removes optimization and memory bottlenecks that traditionally limit the pra
 
 | Feature | Standard Backpropagation | Layer-wise Local Supervision |
 | --- | --- | --- |
-| **Memory Complexity** |  (Linear with layers) | ** (Constant)** |
+| **Memory Complexity** |  (Linear with layers) | **(Constant)** |
 | **Convergence Speed** | Slow initial start | **Instant convergence (4x faster)** |
 | **Gradient Flow** | Risk of Vanishing/Exploding | **No Gradient Blurring** |
 | **Hardware** | Requires Data-Center GPUs | **Consumer GPUs** |
