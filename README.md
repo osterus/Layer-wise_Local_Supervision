@@ -10,7 +10,7 @@
 
 ## 1. Abstract
 
-**Layer-wise Local Supervision (LLS)** is a novel training methodology for Deep Neural Networks that replaces global Backpropagation (BP) with synchronized, local updates. By utilizing the network's output head as a local proxy for every layer, LLS achieves a convergence rate up to **4x faster** than Adam-optimized Backprop while maintaining ** memory complexity** relative to model depth. This method effectively eliminates the "vanishing gradient" problem and allows for training massive architectures on consumer-grade hardware.
+**Layer-wise Local Supervision (LLS)** is a novel training methodology for Deep Neural Networks that replaces global Backpropagation (BP) with synchronized, local updates. By utilizing the network's output head as a local proxy for every layer, LLS achieves a convergence rate up to **4x faster** than Adam-optimized Backprop while maintaining ** memory complexity** relative to model depth (tested on 8 layers). This method effectively eliminates the "vanishing gradient" problem and allows for training massive architectures on consumer-grade hardware.
 
 LLS removes optimization and memory bottlenecks that traditionally limit the practical depth of neural networks. and also (will be tested on deeper models) the relative efficiency gain increases with depth.
 

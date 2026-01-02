@@ -4,7 +4,7 @@ import numpy as np
 # =========================
 # 1. Загрузка данных
 # =========================
-df = pd.read_csv("ffv2_test.csv")
+df = pd.read_csv("ffv2_test24_.csv")
 
 b = df["batch"].values
 loss_bp = df["loss_bp"].values
@@ -70,11 +70,8 @@ valid = ~np.isnan(speedup)
 mean_speedup = np.nanmean(speedup)
 print(f"\nFF mean speedup over BP (full log): {mean_speedup:.2f}x")
 
-# =========================
-# 6. Разделение на 10 частей с локальным speedup
-# =========================
-print("\n=== STATS BY 10% PARTS ===")
-n_parts = 10
+print("\n=== STATS BY PARTS ===")
+n_parts = 5
 part_len = n // n_parts
 part_speedups = []
 
@@ -114,9 +111,7 @@ for i in range(n_parts):
     part_speedups.append(mean_part_speedup)
     print(f"FF mean speedup over BP (this part): {mean_part_speedup:.2f}x")
 
-# =========================
-# 7. Поиск 3–4 пиков ускорения
-# =========================
+
 speedup_smooth = pd.Series(speedup).rolling(window=max(1, n//50), min_periods=1).mean()
 # Находим локальные максимумы
 from scipy.signal import find_peaks
@@ -125,7 +120,7 @@ peaks, _ = find_peaks(speedup_smooth)
 # сортируем по величине speedup
 top_peaks_idx = peaks[np.argsort(speedup_smooth.iloc[peaks])[::-1][:10]]
 
-print("\n=== TOP 3-4 PEAKS OF FF SPEEDUP ===")
+print("\n=== TOP10 PEAKS OF FF SPEEDUP ===")
 for idx in top_peaks_idx:
     start_batch = b[max(0, idx-1)]
     end_batch = b[min(n-1, idx+1)]

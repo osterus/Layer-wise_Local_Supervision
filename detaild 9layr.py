@@ -9,25 +9,31 @@ from tqdm import tqdm
 import copy
 import os
 
+import sentencepiece as spm
+
 print("🚀 Запуск FF-обучения с мониторингом слоёв")
 
 # -------------------------
 # 1. Подготовка данных
 # -------------------------
-SEQ_LEN = 164
+SEQ_LEN = 128
 
 with open("text8", "r") as f:
     text = f.read()
 
-chars = sorted(list(set(text)))
-vocab_size = len(chars)
-stoi = {ch:i for i,ch in enumerate(chars)}
-itos = {i:ch for i,ch in enumerate(chars)}
+# --- Subword tokenization (SentencePiece) ---
+sp = spm.SentencePieceProcessor()
+sp.load("sp_text8.model")
 
-data = [stoi[ch] for ch in text]
-print("✅ Dataset загружен")
+data = sp.encode(text)
+vocab_size = sp.get_piece_size()
 
-class CharDataset(Dataset):
+print("✅ Dataset загружен (Subword, SentencePiece)")
+print("📦 Vocab size:", vocab_size)
+print("🔍 Sample tokens:", sp.encode("this is a test")[:10])
+print("🔁 Decode check:", sp.decode(sp.encode("this is a test")))
+
+class TokenDataset(Dataset):
     def __init__(self, data, seq_len):
         self.data = data
         self.seq_len = seq_len
@@ -38,15 +44,15 @@ class CharDataset(Dataset):
         y = torch.tensor(self.data[idx+1:idx+self.seq_len+1], dtype=torch.long)
         return x, y
 
-dataset = CharDataset(data, SEQ_LEN)
-loader = DataLoader(dataset, batch_size=32, shuffle=True)
+dataset = TokenDataset(data, SEQ_LEN)
+loader = DataLoader(dataset, batch_size=8, shuffle=True)
 print("✅ DataLoader готов")
 
 # -------------------------
 # 2. Модель Transformer
 # -------------------------
 class SimpleTransformer(nn.Module):
-    def __init__(self, vocab_size, d_model=128, nhead=4, num_layers=24):
+    def __init__(self, vocab_size, d_model=128, nhead=4, num_layers=128):
         super().__init__()
         self.embed = nn.Embedding(vocab_size, d_model)
         self.layers = nn.ModuleList([
@@ -128,7 +134,7 @@ def ff_step_with_tracking(model, x, y, optimizers_layers, optimizer_head, prev_w
             temp_logits.view(-1, vocab_size),
             y.view(-1)
         )
-        local_loss = raw_ce * global_loss.item() * alpha
+        local_loss = raw_ce * raw_ce.detach() * alpha
 
         losses_per_layer.append(raw_ce.item())
 
@@ -255,7 +261,7 @@ for epoch in range(1):
             plt.pause(0.01)
         
         # Сохраняем в CSV каждые 10 шагов
-        if batch_idx % 10 == 0:
+        if batch_idx % 2 == 0:
             csv_row = {
                 "batch": batch_idx,
                 "global_loss": global_loss,

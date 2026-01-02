@@ -37,14 +37,14 @@ class CharDataset(Dataset):
         return x, y
 
 dataset = CharDataset(data, SEQ_LEN)
-loader = DataLoader(dataset, batch_size=32, shuffle=True)
+loader = DataLoader(dataset, batch_size=4, shuffle=True)
 print("dataset done")
 
 # -------------------------
 # 2. Модель Transformer
 # -------------------------
 class SimpleTransformer(nn.Module):
-    def __init__(self, vocab_size, d_model=128, nhead=4, num_layers=8):
+    def __init__(self, vocab_size, d_model=128, nhead=4, num_layers=26):
         super().__init__()
         self.embed = nn.Embedding(vocab_size, d_model)
         self.layers = nn.ModuleList([
@@ -213,10 +213,10 @@ for epoch in range(1):
             csv_data.append(csv_row)
             df = pd.DataFrame([csv_row])
             df.to_csv(
-                "ffv2_test.csv",
+                "ffv2_test24.csv",
                 mode="a",
                 index=False,
-                header=not os.path.exists("ffv2_test.csv")
+                header=not os.path.exists("ffv2_test24.csv")
             )
 
 plt.ioff()

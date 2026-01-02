@@ -1,334 +1,769 @@
 
 === BP (full log) ===
-  mean: 2.290713
-   std: 0.097368
+  mean: 2.279817
+   std: 0.082895
    min: 2.165158
    max: 3.377589
- final: 2.269371
-   auc: 6615.047125
+ final: 2.310893
+   auc: 9697.776799
 
 === FF (full log) ===
-  mean: 2.294335
-   std: 0.050285
+  mean: 2.290843
+   std: 0.043834
    min: 2.175229
    max: 3.375002
- final: 2.288244
-   auc: 6625.500838
+ final: 2.336383
+   auc: 9744.681522
 
 === DIFF (full log) ===
-  mean: 0.003621
-   std: 0.058624
+  mean: 0.011026
+   std: 0.049585
    min: -0.456669
    max: 0.095870
- final: 0.018874
-   auc: 10.453713
+ final: 0.025490
+   auc: 46.904722
 
-Rolling STD window: 96
-BP rolling STD mean: 0.026999, max: 0.174715
-FF rolling STD mean: 0.024100, max: 0.146400
+Rolling STD window: 141
+BP rolling STD mean: 0.026296, max: 0.199652
+FF rolling STD mean: 0.024041, max: 0.133210
 
-FF mean speedup over BP (full log): 0.20x
+FF mean speedup over BP (full log): 0.15x
 
-=== STATS BY 10% PARTS ===
+=== STATS BY 4% PARTS ===
 
---- Part 1 (0-288) ---
+--- Part 1 (0-170) ---
 
 === BP ===
-  mean: 2.500781
-   std: 0.199180
-   min: 2.283701
+  mean: 2.604007
+   std: 0.201938
+   min: 2.373922
    max: 3.377589
- final: 2.342423
-   auc: 717.364986
+ final: 2.404942
+   auc: 439.789897
 
 === FF ===
-  mean: 2.379188
-   std: 0.110458
-   min: 2.238898
+  mean: 2.422012
+   std: 0.125946
+   min: 2.288455
    max: 3.375002
- final: 2.321619
-   auc: 682.357946
+ final: 2.358420
+   auc: 408.875269
 
 === DIFF ===
-  mean: -0.121593
-   std: 0.126423
+  mean: -0.181995
+   std: 0.134571
    min: -0.456669
    max: 0.095870
- final: -0.020804
-   auc: -35.007040
-BP rolling STD mean: 0.068809, max: 0.174715
-FF rolling STD mean: 0.032056, max: 0.146400
-FF mean speedup over BP (this part): 0.91x
+ final: -0.046522
+   auc: -30.914628
+BP rolling STD mean: 0.179548, max: 0.199652
+FF rolling STD mean: 0.062043, max: 0.133210
+FF mean speedup over BP (this part): 1.51x
 
---- Part 2 (288-576) ---
+--- Part 2 (170-340) ---
 
 === BP ===
-  mean: 2.295689
-   std: 0.027310
+  mean: 2.342328
+   std: 0.028000
+   min: 2.263408
+   max: 2.441872
+ final: 2.263408
+   auc: 395.882116
+
+=== FF ===
+  mean: 2.312924
+   std: 0.022715
+   min: 2.238898
+   max: 2.382273
+ final: 2.256200
+   auc: 390.916614
+
+=== DIFF ===
+  mean: -0.029404
+   std: 0.011522
+   min: -0.075981
+   max: -0.007208
+ final: -0.007208
+   auc: -4.965503
+BP rolling STD mean: 0.026647, max: 0.027205
+FF rolling STD mean: 0.022232, max: 0.022723
+FF mean speedup over BP (this part): 0.11x
+
+--- Part 3 (340-510) ---
+
+=== BP ===
+  mean: 2.293698
+   std: 0.024957
    min: 2.232027
-   max: 2.370127
- final: 2.264043
-   auc: 658.862695
+   max: 2.364512
+ final: 2.235796
+   auc: 387.665310
 
 === FF ===
-  mean: 2.291196
-   std: 0.024163
+  mean: 2.290335
+   std: 0.024080
    min: 2.230489
-   max: 2.350549
- final: 2.273931
-   auc: 657.570382
+   max: 2.349640
+ final: 2.238048
+   auc: 387.096898
 
 === DIFF ===
-  mean: -0.004494
-   std: 0.008789
-   min: -0.029380
-   max: 0.013231
- final: 0.009888
-   auc: -1.292314
-BP rolling STD mean: 0.024131, max: 0.028494
-FF rolling STD mean: 0.023602, max: 0.026618
-FF mean speedup over BP (this part): 0.03x
+  mean: -0.003363
+   std: 0.006099
+   min: -0.020490
+   max: 0.012249
+ final: 0.002252
+   auc: -0.568411
+BP rolling STD mean: 0.022988, max: 0.025356
+FF rolling STD mean: 0.022625, max: 0.024402
+FF mean speedup over BP (this part): 0.01x
 
---- Part 3 (576-864) ---
+--- Part 4 (510-680) ---
 
 === BP ===
-  mean: 2.274019
-   std: 0.023694
+  mean: 2.277629
+   std: 0.024901
    min: 2.173342
-   max: 2.346096
- final: 2.286149
-   auc: 652.631709
+   max: 2.340505
+ final: 2.244637
+   auc: 384.947040
 
 === FF ===
-  mean: 2.280654
-   std: 0.023126
+  mean: 2.281237
+   std: 0.024508
    min: 2.175229
-   max: 2.355703
- final: 2.295276
-   auc: 654.535115
+   max: 2.346670
+ final: 2.252994
+   auc: 385.553851
 
 === DIFF ===
-  mean: 0.006635
-   std: 0.004479
-   min: -0.005880
-   max: 0.024938
- final: 0.009127
-   auc: 1.903407
-BP rolling STD mean: 0.024029, max: 0.025876
-FF rolling STD mean: 0.023397, max: 0.025417
+  mean: 0.003608
+   std: 0.004139
+   min: -0.006265
+   max: 0.017214
+ final: 0.008357
+   auc: 0.606812
+BP rolling STD mean: 0.024433, max: 0.025510
+FF rolling STD mean: 0.024307, max: 0.025283
 FF mean speedup over BP (this part): 0.00x
 
---- Part 4 (864-1152) ---
+--- Part 5 (680-850) ---
 
 === BP ===
-  mean: 2.267299
-   std: 0.023521
+  mean: 2.274104
+   std: 0.022475
+   min: 2.210942
+   max: 2.346096
+ final: 2.288682
+   auc: 384.328592
+
+=== FF ===
+  mean: 2.281954
+   std: 0.021760
+   min: 2.222671
+   max: 2.355703
+ final: 2.294929
+   auc: 385.653334
+
+=== DIFF ===
+  mean: 0.007851
+   std: 0.004116
+   min: -0.001646
+   max: 0.024938
+ final: 0.006246
+   auc: 1.324741
+BP rolling STD mean: 0.022746, max: 0.023387
+FF rolling STD mean: 0.021940, max: 0.022526
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 6 (850-1020) ---
+
+=== BP ===
+  mean: 2.268378
+   std: 0.023700
    min: 2.197554
    max: 2.318989
- final: 2.296840
-   auc: 650.704241
+ final: 2.265790
+   auc: 383.341705
 
 === FF ===
-  mean: 2.286508
-   std: 0.023675
+  mean: 2.281984
+   std: 0.023841
    min: 2.213161
-   max: 2.346599
- final: 2.312774
-   auc: 656.224700
+   max: 2.339930
+ final: 2.284769
+   auc: 385.641809
 
 === DIFF ===
-  mean: 0.019209
-   std: 0.008188
+  mean: 0.013606
+   std: 0.005875
    min: 0.000262
-   max: 0.041437
- final: 0.015934
-   auc: 5.520459
-BP rolling STD mean: 0.023670, max: 0.025555
-FF rolling STD mean: 0.023566, max: 0.025519
+   max: 0.033770
+ final: 0.018979
+   auc: 2.300104
+BP rolling STD mean: 0.023909, max: 0.024203
+FF rolling STD mean: 0.023856, max: 0.024216
 FF mean speedup over BP (this part): 0.00x
 
---- Part 5 (1152-1440) ---
+--- Part 7 (1020-1190) ---
 
 === BP ===
-  mean: 2.267396
-   std: 0.022477
+  mean: 2.264354
+   std: 0.023049
+   min: 2.204024
+   max: 2.318958
+ final: 2.250201
+   auc: 382.677885
+
+=== FF ===
+  mean: 2.289604
+   std: 0.022575
+   min: 2.237978
+   max: 2.346599
+ final: 2.273015
+   auc: 386.952456
+
+=== DIFF ===
+  mean: 0.025250
+   std: 0.005258
+   min: 0.012190
+   max: 0.041437
+ final: 0.022814
+   auc: 4.274571
+BP rolling STD mean: 0.023235, max: 0.024095
+FF rolling STD mean: 0.022766, max: 0.023610
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 8 (1190-1360) ---
+
+=== BP ===
+  mean: 2.267073
+   std: 0.021722
+   min: 2.216950
+   max: 2.325710
+ final: 2.257871
+   auc: 383.144106
+
+=== FF ===
+  mean: 2.288683
+   std: 0.021076
+   min: 2.238686
+   max: 2.337961
+ final: 2.277213
+   auc: 386.795967
+
+=== DIFF ===
+  mean: 0.021610
+   std: 0.004382
+   min: 0.011312
+   max: 0.036533
+ final: 0.019342
+   auc: 3.651861
+BP rolling STD mean: 0.020920, max: 0.021275
+FF rolling STD mean: 0.020309, max: 0.020628
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 9 (1360-1530) ---
+
+=== BP ===
+  mean: 2.268258
+   std: 0.023524
    min: 2.203829
    max: 2.330434
- final: 2.303077
-   auc: 650.732924
+ final: 2.276186
+   auc: 383.326122
 
 === FF ===
-  mean: 2.289184
-   std: 0.021803
+  mean: 2.289178
+   std: 0.022832
    min: 2.223821
    max: 2.352674
- final: 2.324362
-   auc: 656.985929
+ final: 2.296266
+   auc: 386.866792
 
 === DIFF ===
-  mean: 0.021789
-   std: 0.004827
+  mean: 0.020920
+   std: 0.004862
    min: 0.008878
-   max: 0.036533
- final: 0.021285
-   auc: 6.253006
-BP rolling STD mean: 0.022024, max: 0.024546
-FF rolling STD mean: 0.021314, max: 0.024009
+   max: 0.033676
+ final: 0.020080
+   auc: 3.540670
+BP rolling STD mean: 0.023546, max: 0.024210
+FF rolling STD mean: 0.022974, max: 0.023630
 FF mean speedup over BP (this part): 0.00x
 
---- Part 6 (1440-1728) ---
+--- Part 10 (1530-1700) ---
 
 === BP ===
-  mean: 2.262309
-   std: 0.024604
+  mean: 2.259661
+   std: 0.025684
    min: 2.165158
    max: 2.319188
- final: 2.258397
-   auc: 649.277958
+ final: 2.270087
+   auc: 381.861354
 
 === FF ===
-  mean: 2.283702
-   std: 0.024561
+  mean: 2.281376
+   std: 0.026021
    min: 2.191897
    max: 2.346844
- final: 2.280451
-   auc: 655.417397
+ final: 2.283563
+   auc: 385.539464
 
 === DIFF ===
-  mean: 0.021393
-   std: 0.005108
+  mean: 0.021715
+   std: 0.005533
    min: 0.009726
    max: 0.037348
- final: 0.022053
-   auc: 6.139440
-BP rolling STD mean: 0.024740, max: 0.026671
-FF rolling STD mean: 0.024992, max: 0.026806
+ final: 0.013475
+   auc: 3.678110
+BP rolling STD mean: 0.025677, max: 0.026106
+FF rolling STD mean: 0.026005, max: 0.026550
 FF mean speedup over BP (this part): 0.00x
 
---- Part 7 (1728-2016) ---
+--- Part 11 (1700-1870) ---
 
 === BP ===
-  mean: 2.262573
-   std: 0.024164
-   min: 2.190474
-   max: 2.322106
- final: 2.280587
-   auc: 649.350688
+  mean: 2.264533
+   std: 0.023336
+   min: 2.197028
+   max: 2.307503
+ final: 2.277994
+   auc: 382.701891
 
 === FF ===
-  mean: 2.285860
-   std: 0.023443
+  mean: 2.287213
+   std: 0.022665
    min: 2.221350
-   max: 2.342701
- final: 2.308192
-   auc: 656.032334
+   max: 2.335372
+ final: 2.304199
+   auc: 386.534613
 
 === DIFF ===
-  mean: 0.023287
-   std: 0.004770
+  mean: 0.022679
+   std: 0.004696
+   min: 0.010992
+   max: 0.033918
+ final: 0.026205
+   auc: 3.832722
+BP rolling STD mean: 0.023006, max: 0.023893
+FF rolling STD mean: 0.022519, max: 0.023185
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 12 (1870-2040) ---
+
+=== BP ===
+  mean: 2.262562
+   std: 0.025331
+   min: 2.190474
+   max: 2.343492
+ final: 2.257005
+   auc: 382.392672
+
+=== FF ===
+  mean: 2.286845
+   std: 0.025041
+   min: 2.224242
+   max: 2.376644
+ final: 2.290611
+   auc: 386.491394
+
+=== DIFF ===
+  mean: 0.024283
+   std: 0.005018
    min: 0.012414
    max: 0.037659
- final: 0.027605
-   auc: 6.681646
-BP rolling STD mean: 0.024536, max: 0.026650
-FF rolling STD mean: 0.023563, max: 0.025627
+ final: 0.033606
+   auc: 4.098722
+BP rolling STD mean: 0.025097, max: 0.026038
+FF rolling STD mean: 0.024841, max: 0.026082
 FF mean speedup over BP (this part): 0.00x
 
---- Part 8 (2016-2304) ---
+--- Part 13 (2040-2210) ---
 
 === BP ===
-  mean: 2.260666
-   std: 0.024433
+  mean: 2.261407
+   std: 0.023398
    min: 2.166648
-   max: 2.343492
- final: 2.286099
-   auc: 648.784235
+   max: 2.312695
+ final: 2.258505
+   auc: 382.163731
 
 === FF ===
-  mean: 2.283713
-   std: 0.024495
+  mean: 2.283423
+   std: 0.023217
    min: 2.181635
-   max: 2.376644
- final: 2.310324
-   auc: 655.398338
+   max: 2.341016
+ final: 2.271211
+   auc: 385.886762
 
 === DIFF ===
-  mean: 0.023046
-   std: 0.005047
+  mean: 0.022016
+   std: 0.004886
    min: 0.009518
-   max: 0.036743
- final: 0.024225
-   auc: 6.614103
-BP rolling STD mean: 0.024072, max: 0.026709
-FF rolling STD mean: 0.023845, max: 0.026478
+   max: 0.036384
+ final: 0.012706
+   auc: 3.723031
+BP rolling STD mean: 0.023408, max: 0.023777
+FF rolling STD mean: 0.023149, max: 0.023500
 FF mean speedup over BP (this part): 0.00x
 
---- Part 9 (2304-2592) ---
+--- Part 14 (2210-2380) ---
 
 === BP ===
-  mean: 2.259096
-   std: 0.024448
+  mean: 2.257236
+   std: 0.025810
    min: 2.169360
-   max: 2.311871
- final: 2.217954
-   auc: 648.387604
+   max: 2.316266
+ final: 2.251187
+   auc: 381.458360
 
 === FF ===
-  mean: 2.282959
-   std: 0.024649
+  mean: 2.280583
+   std: 0.025745
    min: 2.184872
-   max: 2.337098
- final: 2.245075
-   auc: 655.233364
+   max: 2.335672
+ final: 2.273321
+   auc: 385.406360
 
 === DIFF ===
-  mean: 0.023863
-   std: 0.004775
+  mean: 0.023347
+   std: 0.004765
    min: 0.006081
-   max: 0.038065
- final: 0.027121
-   auc: 6.845760
-BP rolling STD mean: 0.023133, max: 0.026040
-FF rolling STD mean: 0.023441, max: 0.026186
+   max: 0.036743
+ final: 0.022134
+   auc: 3.948001
+BP rolling STD mean: 0.026402, max: 0.026901
+FF rolling STD mean: 0.026145, max: 0.026634
 FF mean speedup over BP (this part): 0.00x
 
---- Part 10 (2592-2889) ---
+--- Part 15 (2380-2550) ---
 
 === BP ===
-  mean: 2.258317
-   std: 0.023540
-   min: 2.180628
-   max: 2.312139
- final: 2.269371
-   auc: 668.460461
+  mean: 2.260332
+   std: 0.022159
+   min: 2.180578
+   max: 2.311871
+ final: 2.274183
+   auc: 381.992229
 
 === FF ===
-  mean: 2.280804
-   std: 0.023054
-   min: 2.202300
-   max: 2.333114
- final: 2.288244
-   auc: 675.118560
+  mean: 2.284754
+   std: 0.022465
+   min: 2.210011
+   max: 2.337098
+ final: 2.297494
+   auc: 386.122367
 
 === DIFF ===
-  mean: 0.022488
-   std: 0.004810
+  mean: 0.024422
+   std: 0.004782
+   min: 0.009687
+   max: 0.038065
+ final: 0.023311
+   auc: 4.130137
+BP rolling STD mean: 0.023086, max: 0.023376
+FF rolling STD mean: 0.023220, max: 0.023413
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 16 (2550-2720) ---
+
+=== BP ===
+  mean: 2.258670
+   std: 0.025691
+   min: 2.176162
+   max: 2.310482
+ final: 2.275485
+   auc: 381.711073
+
+=== FF ===
+  mean: 2.281622
+   std: 0.025126
+   min: 2.200502
+   max: 2.333114
+ final: 2.295390
+   auc: 385.592549
+
+=== DIFF ===
+  mean: 0.022952
+   std: 0.004436
+   min: 0.011177
+   max: 0.033978
+ final: 0.019905
+   auc: 3.881477
+BP rolling STD mean: 0.026371, max: 0.026849
+FF rolling STD mean: 0.025789, max: 0.026333
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 17 (2720-2890) ---
+
+=== BP ===
+  mean: 2.257708
+   std: 0.022096
+   min: 2.199100
+   max: 2.312139
+ final: 2.258880
+   auc: 381.540503
+
+=== FF ===
+  mean: 2.279865
+   std: 0.021780
+   min: 2.220646
+   max: 2.329723
+ final: 2.278336
+   auc: 385.287133
+
+=== DIFF ===
+  mean: 0.022158
+   std: 0.004919
    min: 0.010296
    max: 0.039208
- final: 0.018874
-   auc: 6.658099
-BP rolling STD mean: 0.022671, max: 0.026571
-FF rolling STD mean: 0.022027, max: 0.025943
+ final: 0.019456
+   auc: 3.746630
+BP rolling STD mean: 0.021418, max: 0.022082
+FF rolling STD mean: 0.021265, max: 0.021750
 FF mean speedup over BP (this part): 0.00x
 
-=== TOP 3-4 PEAKS OF FF SPEEDUP ===
+--- Part 18 (2890-3060) ---
+
+=== BP ===
+  mean: 2.255465
+   std: 0.023558
+   min: 2.183959
+   max: 2.307389
+ final: 2.269759
+   auc: 381.153101
+
+=== FF ===
+  mean: 2.281649
+   std: 0.023801
+   min: 2.216087
+   max: 2.335552
+ final: 2.292279
+   auc: 385.580467
+
+=== DIFF ===
+  mean: 0.026183
+   std: 0.005451
+   min: 0.013968
+   max: 0.044183
+ final: 0.022520
+   auc: 4.427366
+BP rolling STD mean: 0.024281, max: 0.024853
+FF rolling STD mean: 0.024537, max: 0.024975
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 19 (3060-3230) ---
+
+=== BP ===
+  mean: 2.257927
+   std: 0.023897
+   min: 2.196056
+   max: 2.319395
+ final: 2.256632
+   auc: 381.583046
+
+=== FF ===
+  mean: 2.284498
+   std: 0.023627
+   min: 2.221112
+   max: 2.344627
+ final: 2.277030
+   auc: 386.075055
+
+=== DIFF ===
+  mean: 0.026571
+   std: 0.004961
+   min: 0.012643
+   max: 0.043472
+ final: 0.020399
+   auc: 4.492008
+BP rolling STD mean: 0.023783, max: 0.024372
+FF rolling STD mean: 0.023576, max: 0.024269
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 20 (3230-3400) ---
+
+=== BP ===
+  mean: 2.260175
+   std: 0.023407
+   min: 2.204642
+   max: 2.325839
+ final: 2.230396
+   auc: 381.990088
+
+=== FF ===
+  mean: 2.287959
+   std: 0.022929
+   min: 2.236593
+   max: 2.357007
+ final: 2.257814
+   auc: 386.687145
+
+=== DIFF ===
+  mean: 0.027784
+   std: 0.004717
+   min: 0.015970
+   max: 0.040916
+ final: 0.027417
+   auc: 4.697058
+BP rolling STD mean: 0.023862, max: 0.024288
+FF rolling STD mean: 0.023458, max: 0.023890
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 21 (3400-3570) ---
+
+=== BP ===
+  mean: 2.254955
+   std: 0.022594
+   min: 2.183423
+   max: 2.312586
+ final: 2.278803
+   auc: 381.089452
+
+=== FF ===
+  mean: 2.280107
+   std: 0.022121
+   min: 2.215168
+   max: 2.336033
+ final: 2.304111
+   auc: 385.343299
+
+=== DIFF ===
+  mean: 0.025152
+   std: 0.005403
+   min: 0.007885
+   max: 0.042712
+ final: 0.025308
+   auc: 4.253846
+BP rolling STD mean: 0.022330, max: 0.022900
+FF rolling STD mean: 0.021794, max: 0.022373
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 22 (3570-3740) ---
+
+=== BP ===
+  mean: 2.259615
+   std: 0.023641
+   min: 2.183347
+   max: 2.318503
+ final: 2.214771
+   auc: 381.888573
+
+=== FF ===
+  mean: 2.286061
+   std: 0.023093
+   min: 2.213485
+   max: 2.339859
+ final: 2.252766
+   auc: 386.351847
+
+=== DIFF ===
+  mean: 0.026447
+   std: 0.005190
+   min: 0.014797
+   max: 0.043279
+ final: 0.037995
+   auc: 4.463274
+BP rolling STD mean: 0.023454, max: 0.024111
+FF rolling STD mean: 0.022925, max: 0.023538
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 23 (3740-3910) ---
+
+=== BP ===
+  mean: 2.254223
+   std: 0.026383
+   min: 2.175612
+   max: 2.312064
+ final: 2.235843
+   auc: 380.962298
+
+=== FF ===
+  mean: 2.280808
+   std: 0.025873
+   min: 2.204179
+   max: 2.336777
+ final: 2.257155
+   auc: 385.458086
+
+=== DIFF ===
+  mean: 0.026586
+   std: 0.005574
+   min: 0.016568
+   max: 0.047222
+ final: 0.021312
+   auc: 4.495788
+BP rolling STD mean: 0.026777, max: 0.027924
+FF rolling STD mean: 0.026030, max: 0.027204
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 24 (3910-4080) ---
+
+=== BP ===
+  mean: 2.254587
+   std: 0.022963
+   min: 2.190325
+   max: 2.308913
+ final: 2.270689
+   auc: 381.020463
+
+=== FF ===
+  mean: 2.281106
+   std: 0.022313
+   min: 2.211874
+   max: 2.338401
+ final: 2.297749
+   auc: 385.502372
+
+=== DIFF ===
+  mean: 0.026519
+   std: 0.005586
+   min: 0.013398
+   max: 0.045734
+ final: 0.027060
+   auc: 4.481908
+BP rolling STD mean: 0.023117, max: 0.023741
+FF rolling STD mean: 0.022560, max: 0.023155
+FF mean speedup over BP (this part): 0.00x
+
+--- Part 25 (4080-4255) ---
+
+=== BP ===
+  mean: 2.257203
+   std: 0.023925
+   min: 2.187631
+   max: 2.319101
+ final: 2.310893
+   auc: 392.736456
+
+=== FF ===
+  mean: 2.285454
+   std: 0.023652
+   min: 2.222012
+   max: 2.341787
+ final: 2.336383
+   auc: 397.657303
+
+=== DIFF ===
+  mean: 0.028250
+   std: 0.005559
+   min: 0.014561
+   max: 0.044635
+ final: 0.025490
+   auc: 4.920848
+BP rolling STD mean: 0.023481, max: 0.024555
+FF rolling STD mean: 0.022918, max: 0.024637
+FF mean speedup over BP (this part): 0.00x
+
+=== TOP10 PEAKS OF FF SPEEDUP ===
 Peak at batch 17, speedup=3.75x, period ~ 15-19
-Peak at batch 119, speedup=2.04x, period ~ 117-121
-Peak at batch 315, speedup=0.71x, period ~ 313-317
-Peak at batch 387, speedup=0.60x, period ~ 385-389
-Peak at batch 403, speedup=0.58x, period ~ 401-405
-Peak at batch 413, speedup=0.57x, period ~ 411-415
-Peak at batch 449, speedup=0.55x, period ~ 447-451
-Peak at batch 463, speedup=0.53x, period ~ 461-465
-Peak at batch 477, speedup=0.53x, period ~ 475-479
-Peak at batch 493, speedup=0.51x, period ~ 491-495
+Peak at batch 173, speedup=1.67x, period ~ 171-175
+Peak at batch 371, speedup=0.67x, period ~ 369-373
+Peak at batch 443, speedup=0.57x, period ~ 441-445
+Peak at batch 449, speedup=0.57x, period ~ 447-451
+Peak at batch 459, speedup=0.56x, period ~ 457-461
+Peak at batch 463, speedup=0.56x, period ~ 461-465
+Peak at batch 477, speedup=0.55x, period ~ 475-479
+Peak at batch 525, speedup=0.50x, period ~ 523-527
+Peak at batch 543, speedup=0.49x, period ~ 541-545
