@@ -1,4 +1,4 @@
-# Layer-wise Local Supervision (LLS)
+# Layer-wise Local Supervision (LLS) (old readmme need update for more acurate claims from reserch)
 
 ### A High-Efficiency Alternative to Global Backpropagation
 
